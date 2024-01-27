@@ -1,5 +1,8 @@
+console.log("teset lai bai so 8");
 
-// bài số 8, Hàm trả về số đồng tiền ít nhất để quy đổi, chỉ sử dụng 500, 100, 50, 20, 2, 1
+
+
+
 function TotalCoins(salary){
 
     function findNoteAndCoins(salary) {
@@ -17,7 +20,7 @@ function TotalCoins(salary){
         }    
         return notesCount;
     }
-    console.log(findNoteAndCoins(salary))
+    console.log(findNoteAndCoins(2316))
 
     let noteCoins = findNoteAndCoins(salary);
     let total = 0;
@@ -36,8 +39,8 @@ console.log(TotalCoins(2316))
 
 function DocTienBangChu(SoTien) {
 
-    let ChuSo = new Array(" không", " một", " hai", " ba", " bốn", " năm", " sáu", " bảy", " tám", " chín");
-    let Tien = new Array("", " nghìn", " triệu", " tỷ", " nghìn tỷ", " triệu tỷ");
+    let ChuSo = new Array(" không ", " một ", " hai ", " ba ", " bốn ", " năm ", " sáu ", " bảy ", " tám ", " chín ");
+    let Tien = new Array("", "nghìn", "triệu", "tỷ", "nghìn tỷ", "triệu tỷ");
 
     //1. Hàm đọc số có ba chữ số;
     function DocSo3ChuSo(baso) {
@@ -50,18 +53,18 @@ function DocTienBangChu(SoTien) {
         donvi = baso % 10;
         if (tram == 0 && chuc == 0 && donvi == 0) return "";
         if (tram != 0) {
-            KetQua += ChuSo[tram] + " trăm";
-            if ((chuc == 0) && (donvi != 0)) KetQua += " linh";
+            KetQua += ChuSo[tram] + "trăm";
+            if ((chuc == 0) && (donvi != 0)) KetQua += "linh";
         }
         if ((chuc != 0) && (chuc != 1)) {
-            KetQua += ChuSo[chuc] + " mươi";
-            if ((chuc == 0) && (donvi != 0)) KetQua = KetQua + " linh";
+            KetQua += ChuSo[chuc] + "mươi";
+            if ((chuc == 0) && (donvi != 0)) KetQua = KetQua + "linh";
         }
-        if (chuc == 1) KetQua += " mười";
+        if (chuc == 1) KetQua += "mười";
         switch (donvi) {
             case 1:
                 if ((chuc != 0) && (chuc != 1)) {
-                    KetQua += " mốt";
+                    KetQua += "mốt";
                 }
                 else {
                     KetQua += ChuSo[donvi];
@@ -72,7 +75,7 @@ function DocTienBangChu(SoTien) {
                     KetQua += ChuSo[donvi];
                 }
                 else {
-                    KetQua += " lăm";
+                    KetQua += "lăm";
                 }
                 break;
             default:
@@ -159,6 +162,9 @@ function DocTienBangChu(SoTien) {
 
 
 
+
+
+
 module.exports = {
     DocTienBangChu,
     TotalCoins,
@@ -166,4 +172,4 @@ module.exports = {
 
 
 console.log('chay thu ham doc chu so')
-console.log(DocTienBangChu(125200));
+console.log(DocTienBangChu(1253400));

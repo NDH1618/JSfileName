@@ -1,0 +1,25 @@
+{
+  "name": "jsfilename",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jsfile.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NDH1618/JSfileName.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NDH1618/JSfileName/issues"
+  },
+  "homepage": "https://github.com/NDH1618/JSfileName#readme",
+  "devDependencies": {
+    "chai": "^5.0.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
+  }
+}
